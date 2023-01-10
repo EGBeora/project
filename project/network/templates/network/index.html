@@ -1,0 +1,77 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    <!-- <style>
+        .newpost {
+            width: 50%;
+            height: 100px;
+            text-align: left;
+        }
+
+        html {
+            background-color: #2a2e33;
+        }
+
+        body {
+            background-color: #2a2e33;
+            margin: 2%
+        }
+
+        h1 {
+            margin-top: 20pt;
+            margin-bottom: 10pt;
+            color: rgb(151, 155, 156);
+        }
+
+        #posts {
+            margin-top: 30pt;
+        }
+
+        .post {
+            color: rgb(151, 155, 156);
+            background-color: #333941;
+            margin-bottom: 10pt;
+            padding-left: 2%;
+        }
+    </style> -->
+
+    <script>
+
+        let counter = 1;
+        const quantity = 20;
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            function add_post(contents) {
+
+                const post = document.createElement('div');
+                post.className = 'post';
+                post.innerHTML = contents;
+
+                document.querySelector('#posts').append(post);
+            };
+
+            document.addEventListener('click', event => {
+
+                const element = event.target;
+
+                if (element.className === 'submitpost') {
+                        const contents = document.querySelector('.newpost').textContent
+                        add_post(contents)
+                }
+                
+            });
+
+        });
+
+        
+    </script>
+
+    <div id="div-newpost">
+        <h1>New Post</h1>
+        <textarea class="newpost" rows="20" cols="50" onFocus="this.select()">New Post!</textarea>
+    </div>
+    <button class="submitpost" type="submit">Submit</button>
+    <div id="posts"></div>
+
+{% endblock %}

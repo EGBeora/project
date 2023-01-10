@@ -1,0 +1,31 @@
+.newpost {
+    width: 50%;
+    height: 100px;
+    text-align: left;
+}
+
+html {
+    background-color: #2a2e33;
+}
+
+body {
+    background-color: #2a2e33;
+    margin: 2%
+}
+
+h1 {
+    margin-top: 20pt;
+    margin-bottom: 10pt;
+    color: rgb(151, 155, 156);
+}
+
+#posts {
+    margin-top: 30pt;
+}
+
+.post {
+    color: rgb(151, 155, 156);
+    background-color: #333941;
+    margin-bottom: 10pt;
+    padding-left: 2%;
+}
